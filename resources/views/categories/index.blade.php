@@ -6,6 +6,10 @@
 
     <title>Blog</title>
 </head>
+<x-app-layout>
+        <x-slot name="header">
+            BLOG
+        </x-slot>
 <body>
     <h1>レバっテックBlog</h1>
     <div class = "posts">
@@ -24,4 +28,5 @@
         {{ $posts->links() }}
     </div>
 </body>
+</x-app-layout>
 </html>

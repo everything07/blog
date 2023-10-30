@@ -6,6 +6,10 @@
 
     <title>Blog</title>
 </head>
+<x-app-layout>
+        <x-slot name="header">
+            <h1>BLOG</h1>
+        </x-slot>
 <body>
     <h1>レバっテックBlog</h1>
     <div class = "posts">
@@ -24,6 +28,7 @@
                 <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
             </div>
         @endforeach
+        <p>ログインユーザー；{{ Auth::user()->name }}</p>
     </div>    
     <div class='paginate'>
         {{ $posts->links() }}
@@ -40,4 +45,5 @@
 
 
 </body>
+</x-app-layout>
 </html>
